@@ -3,31 +3,19 @@ import Button from "@mui/material/Button";
 
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import './App.css';
-import logo from './assets/dota-2.png';
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import styles from '../styles/Home.module.css';
+import logo from '../assets/dota-2-sm.png';
+import defaultThemeOptions from "../styles/theme/defaultTheme";
+import { ThemeProvider, createTheme } from '@mui/material';
 
-const theme = createTheme({
-  typography: {
+import Image from 'next/image'
 
-    button: {
-      fontSize: 24,
-      fontWeight: "bolder",
-      fontFamily: "Helvetica"
-    },    
-  }, 
-  palette: {
-    primary: {
-      main: "#ff5252"
-    },
-    secondary: {
-      main: "#ff5252"
-    },
-  },
-});
-export default function App() {
+const defaultTheme = createTheme(defaultThemeOptions);
+
+export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={defaultTheme}>
+<Grid width="100%" height="100%" className="bg-style">
         <Grid
           container
           spacing={0}
@@ -40,11 +28,11 @@ export default function App() {
           marginLeft="25%"
         >
           <Box className="logo-style">
-          <img src={logo} height="300px"/>Sketch
+          <Image src={logo} />   Sketch
           </Box>
             <Button className="button-style">Create Game</Button>
             <Button className="button-style">Join Game</Button>
-
+            </Grid>
         </Grid>
     </ThemeProvider>
   );
