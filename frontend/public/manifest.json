@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "DotaSketch",
+  "name": "DotaSketch, Dota2 themed drawing guessing game",
   "icons": [
     {
       "src": "favicon.ico",

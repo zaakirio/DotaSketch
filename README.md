@@ -1,5 +1,5 @@
 # DotaSketch
-Drawing guessing game for dota2
+Drawing guessing game with a Dota2 theme
 
 # Structure:
 Necessary UI components:
