@@ -9,9 +9,9 @@ const avatarList = [
     "avatar_2.png",
     "avatar_3.png",
     "avatar_4.png",
-    "avatar_5.png",
-    "avatar_6.png"
 ];
+
+
 
 const AvatarSelector: React.FC = () => {
     const { selectedAvatar, setAvatar } = useStore(state => ({
@@ -27,7 +27,16 @@ const AvatarSelector: React.FC = () => {
                     const isSelected = (selectedAvatar === index)
                     return (
                         <Grid item md={2} sm={4} xs={6} onClick={() => setAvatar(index)}>
-
+                            <div className="avatarsContainer" style={{ border: isSelected ? '2px solid black' : '' }}>
+                                <div style={{ paddingBottom: !isSelected ? '1.75em' : 0 }}>
+                                    <img src={`/images/${avatar}`} className="avatar" />
+                                </div>
+                                {isSelected && 
+                                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                                    </svg>
+                                }
+                            </div>
                         </Grid>
                     )
                 })}
