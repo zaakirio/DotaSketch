@@ -1,0 +1,16 @@
+.App {
+    text-align: center;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0.45em;
+    height: 0.45em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: slategray;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #b8c0c8;
+  }
